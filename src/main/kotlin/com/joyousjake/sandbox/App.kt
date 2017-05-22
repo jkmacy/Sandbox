@@ -113,7 +113,7 @@ class DrawPanel : JPanel() {
     var vel1 : Double = 0.0
     var fVel1 : Double = 0.0
 
-    var pos2 = 800.0
+    var pos2 = 770.0
     var vel2 : Double = 0.0
     var fVel2 : Double = 0.0
     init {
@@ -133,9 +133,9 @@ class DrawPanel : JPanel() {
     }
 
     override fun update(graphics: Graphics?) {
-        if (pos1 >= pos2) {
-            vel1 = -fVel1
-            vel2 = -fVel2
+        if (pos1 + 30 >= pos2) {
+            vel1 = fVel1
+            vel2 = fVel2
         }
         pos1 += vel1
         pos2 -= vel2
